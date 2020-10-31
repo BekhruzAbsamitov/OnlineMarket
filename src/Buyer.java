@@ -3,12 +3,16 @@ import java.util.List;
 public class Buyer extends User {
 
     private List<Product> cart;
-    private double moneyAmount;
+    private double balance;
 
-    public Buyer(String name, String email, String password, List<Product> cart, double moneyAmount) {
+    public void buy() {
+
+    }
+
+    public Buyer(String name, String email, String password, List<Product> cart, double balance) {
         super(name, email, password);
         this.cart = cart;
-        this.moneyAmount = moneyAmount;
+        this.balance = balance;
     }
 
     public List<Product> getCart() {
@@ -19,11 +23,11 @@ public class Buyer extends User {
         this.cart = cart;
     }
 
-    public double getMoneyAmount() {
-        return moneyAmount;
+    public double getBalance() {
+        return balance;
     }
 
-    public void setMoneyAmount(double moneyAmount) {
-        this.moneyAmount = moneyAmount;
+    public void setBalance(double balance) {
+        this.balance = balance;
     }
 }
